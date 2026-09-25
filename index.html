@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor y Pizarra</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="contenedor">
+
+        <!-- LADO IZQUIERDO: CONVERSOR -->
+        <section class="conversor">
+
+            <input
+                type="text"
+                id="nombreNota"
+                class="titulo-input"
+                placeholder="Nombre de la notita"
+            >
+
+            <div class="fila-monto">
+
+                <input
+                    type="number"
+                    id="monto"
+                    placeholder="20.000"
+                >
+
+                <select id="moneda">
+                    <option value="dolar">US$</option>
+                    <option value="euro">€</option>
+                </select>
+
+            </div>
+
+            <button id="agregarNota" class="boton-agregar">
+
+                <span id="resultadoPreview">13 US$</span>
+
+                <strong>AGREGAR</strong>
+
+            </button>
+
+        </section>
+
+
+        <!-- LADO DERECHO: PIZARRA -->
+        <section class="pizarra">
+
+            <div id="notas" class="notas">
+                <!-- Acá aparecerán las notitas -->
+            </div>
+
+            <div class="barra-botones">
+
+                <button
+                    id="compararGalletas"
+                    class="boton-comparar">
+                    COMPARAR GALLETAS
+                </button>
+
+                <button
+                    id="agregarPersonalizada"
+                    class="boton-personalizada">
+                    AGREGAR
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA PARA AGREGAR NOTA PERSONALIZADA -->
+
+    <div id="modal" class="modal">
+
+        <div class="modal-contenido">
+
+            <h2>Nueva notita</h2>
+
+            <input
+                type="text"
+                id="tituloPersonalizado"
+                placeholder="Título de la notita"
+            >
+
+            <textarea
+                id="textoPersonalizado"
+                placeholder="Escribí tu nota..."
+            ></textarea>
+
+            <div class="modal-botones">
+
+                <button id="cancelarNota">
+                    CANCELAR
+                </button>
+
+                <button id="guardarNota">
+                    AGREGAR
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
